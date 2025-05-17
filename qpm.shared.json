@@ -87,7 +87,7 @@
       },
       {
         "id": "bs-cordl",
-        "versionRange": "4004.*",
+        "versionRange": "4005.*",
         "additionalData": {}
       },
       {
@@ -107,59 +107,11 @@
   "restoredDependencies": [
     {
       "dependency": {
-        "id": "autohooks",
-        "versionRange": "=0.1.1688867040198656",
-        "additionalData": {
-          "headersOnly": true,
-          "overrideSoName": "libautohooks.so",
-          "branchName": "version/v0_1_1688867040198656",
-          "cmake": true
-        }
-      },
-      "version": "0.1.1688867040198656"
-    },
-    {
-      "dependency": {
-        "id": "paper2_scotland2",
-        "versionRange": "=4.6.1",
-        "additionalData": {
-          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.1/libpaper2_scotland2.so",
-          "overrideSoName": "libpaper2_scotland2.so",
-          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.1/paper2_scotland2.qmod",
-          "branchName": "version/v4_6_1",
-          "compileOptions": {
-            "systemIncludes": [
-              "shared/utfcpp/source"
-            ]
-          },
-          "cmake": false
-        }
-      },
-      "version": "4.6.1"
-    },
-    {
-      "dependency": {
-        "id": "libil2cpp",
-        "versionRange": "=0.4.0",
-        "additionalData": {
-          "headersOnly": true,
-          "compileOptions": {
-            "systemIncludes": [
-              "il2cpp/external/baselib/Include",
-              "il2cpp/external/baselib/Platforms/Android/Include"
-            ]
-          }
-        }
-      },
-      "version": "0.4.0"
-    },
-    {
-      "dependency": {
         "id": "bs-cordl",
-        "versionRange": "=4004.0.0",
+        "versionRange": "=4005.0.0",
         "additionalData": {
           "headersOnly": true,
-          "branchName": "version/v4004_0_0",
+          "branchName": "version/v4005_0_0",
           "compileOptions": {
             "includePaths": [
               "include"
@@ -175,7 +127,58 @@
           }
         }
       },
-      "version": "4004.0.0"
+      "version": "4005.0.0"
+    },
+    {
+      "dependency": {
+        "id": "paper2_scotland2",
+        "versionRange": "=4.6.4",
+        "additionalData": {
+          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.4/libpaper2_scotland2.so",
+          "overrideSoName": "libpaper2_scotland2.so",
+          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.6.4/paper2_scotland2.qmod",
+          "branchName": "version/v4_6_4",
+          "compileOptions": {
+            "systemIncludes": [
+              "shared/utfcpp/source"
+            ]
+          },
+          "cmake": false
+        }
+      },
+      "version": "4.6.4"
+    },
+    {
+      "dependency": {
+        "id": "autohooks",
+        "versionRange": "=0.1.1688867040198656",
+        "additionalData": {
+          "headersOnly": true,
+          "overrideSoName": "libautohooks.so",
+          "branchName": "version/v0_1_1688867040198656",
+          "cmake": true
+        }
+      },
+      "version": "0.1.1688867040198656"
+    },
+    {
+      "dependency": {
+        "id": "fmt",
+        "versionRange": "=11.0.2",
+        "additionalData": {
+          "headersOnly": true,
+          "branchName": "version/v11_0_2",
+          "compileOptions": {
+            "systemIncludes": [
+              "fmt/include/"
+            ],
+            "cppFlags": [
+              "-DFMT_HEADER_ONLY"
+            ]
+          }
+        }
+      },
+      "version": "11.0.2"
     },
     {
       "dependency": {
@@ -207,22 +210,19 @@
     },
     {
       "dependency": {
-        "id": "fmt",
-        "versionRange": "=11.0.2",
+        "id": "libil2cpp",
+        "versionRange": "=0.4.0",
         "additionalData": {
           "headersOnly": true,
-          "branchName": "version/v11_0_2",
           "compileOptions": {
             "systemIncludes": [
-              "fmt/include/"
-            ],
-            "cppFlags": [
-              "-DFMT_HEADER_ONLY"
+              "il2cpp/external/baselib/Include",
+              "il2cpp/external/baselib/Platforms/Android/Include"
             ]
           }
         }
       },
-      "version": "11.0.2"
+      "version": "0.4.0"
     }
   ]
 }
