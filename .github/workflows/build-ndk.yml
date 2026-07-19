@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Read info from qpm.json
         id: read_qpm_info
@@ -51,7 +51,7 @@ jobs:
     needs: qpm_info
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         name: Checkout
         with:
           submodules: true
@@ -59,7 +59,7 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      - uses: seanmiddleditch/gha-setup-ninja@v3
+      - uses: seanmiddleditch/gha-setup-ninja@v6
 
       - name: Get home path
         run: |
@@ -144,7 +144,7 @@ jobs:
 
     steps:
       - name: Download build artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: build-artifacts
           path: output/
@@ -163,7 +163,7 @@ jobs:
 
       - name: Upload .qmod
         id: upload_file_qmod
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.inputs.version }}
           draft: false
@@ -190,7 +190,7 @@ jobs:
 
       - name: Upload .so artifacts
         id: upload_file_so
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.inputs.version }}
           files: |

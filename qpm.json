@@ -65,7 +65,7 @@
         "pwsh ./scripts/update-version.ps1 $0:?"
       ]
     },
-    "ndk": "^27.2.12479018",
+    "ndk": "^29.0.14206865",
     "qmodIncludeDirs": [
       "./build",
       "./extern/libs"
@@ -81,22 +81,27 @@
     },
     {
       "id": "beatsaber-hook",
-      "versionRange": "^6.4.2",
+      "versionRange": "^8.0.1",
       "additionalData": {}
     },
     {
       "id": "bs-cordl",
-      "versionRange": "4008",
+      "versionRange": "4402.*",
+      "additionalData": {}
+    },
+    {
+      "id": "flamingo",
+      "versionRange": "^1.2.1",
       "additionalData": {}
     },
     {
       "id": "paper2_scotland2",
-      "versionRange": "^4.6.4",
+      "versionRange": "^4.6.5",
       "additionalData": {}
     },
     {
       "id": "scotland2",
-      "versionRange": "^0.1.6",
+      "versionRange": "^0.1.7",
       "additionalData": {
         "includeQmod": false
       }

@@ -1,7 +1,6 @@
 #include "main.hpp"
 
 #include "autohooks/shared/hooks.hpp"
-#include "beatsaber-hook/shared/utils/il2cpp-functions.hpp"
 #include "logger.hpp"
 #include "modInfo.hpp"
 #include "scotland2/shared/modloader.h"
@@ -20,7 +19,7 @@ MOD_EXPORT_FUNC void setup(CModInfo& info) {
 /// @return
 MOD_EXPORT_FUNC void load() {
     // Initialize il2cpp functions
-    il2cpp_functions::Init();
+    i2c::functions::initialize();
 
     // Get the number of early hooks that will be installed.
     auto earlyHookCount = EARLY_HOOK_COUNT;

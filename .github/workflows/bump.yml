@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Read info from qpm.json
         id: read_qpm_info
@@ -53,7 +53,7 @@ jobs:
     needs: qpm_info
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         name: Checkout
         with:
           submodules: true
@@ -61,7 +61,7 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      - uses: seanmiddleditch/gha-setup-ninja@v3
+      - uses: seanmiddleditch/gha-setup-ninja@v6
         with:
           destination: /tmp/ninja-build
 
@@ -136,7 +136,7 @@ jobs:
           mv "./build/${{ needs.qpm_info.outputs.override_so_name }}" "./${{ needs.qpm_info.outputs.override_so_name }}"
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-artifacts
           if-no-files-found: error
@@ -168,7 +168,7 @@ jobs:
           git reset --hard
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ github.token }}
           branch: bump/${{ env.game_version }}

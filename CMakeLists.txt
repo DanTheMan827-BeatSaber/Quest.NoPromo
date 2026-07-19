@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.22)
 option(QUEST "Build for quest" ON)
 
 # Globals
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED 20)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED 23)
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
@@ -64,17 +64,13 @@ add_library(
         ${c_file_list}
 )
 
-# for inline hook
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE -llog)
-
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${INCLUDE_DIR})
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${SHARED_DIR})
 
-# beatsaber hook inline hook
+# Include "mmkay" if it exists, mmkay?
+if(EXISTS "${EXTERN_DIR}/includes/mmkay/shared/mmkay.cmake")
+        include("${EXTERN_DIR}/includes/mmkay/shared/mmkay.cmake")
+endif()
 
-RECURSE_FILES(src_inline_hook_beatsaber_hook_local_extra_c ${EXTERN_DIR}/includes/beatsaber-hook/shared/inline-hook/*.c)
-RECURSE_FILES(src_inline_hook_beatsaber_hook_local_extra_cpp ${EXTERN_DIR}/includes/beatsaber-hook/shared/inline-hook/*.cpp)
-
-target_sources(${COMPILE_ID} PRIVATE ${src_inline_hook_beatsaber_hook_local_extra_c})
-target_sources(${COMPILE_ID} PRIVATE ${src_inline_hook_beatsaber_hook_local_extra_cpp})
+# Include user includes
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/user-includes.cmake")
