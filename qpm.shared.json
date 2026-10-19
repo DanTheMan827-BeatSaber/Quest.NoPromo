@@ -82,12 +82,12 @@
       },
       {
         "id": "beatsaber-hook",
-        "versionRange": "^8.2.1",
+        "versionRange": "^9.3.0",
         "additionalData": {}
       },
       {
         "id": "bs-cordl",
-        "versionRange": "4500.*",
+        "versionRange": "4503.*",
         "additionalData": {}
       },
       {
@@ -112,6 +112,30 @@
   "restoredDependencies": [
     {
       "dependency": {
+        "id": "bs-cordl",
+        "versionRange": "=4503.0.0",
+        "additionalData": {
+          "headersOnly": true,
+          "branchName": "version/v4503_0_0",
+          "compileOptions": {
+            "includePaths": [
+              "include"
+            ],
+            "cppFeatures": [],
+            "cppFlags": [
+              "-fdeclspec",
+              "-DUNITY_6",
+              "-DUNITY_6_3",
+              "-DHAS_CODEGEN",
+              "-Wno-invalid-offsetof"
+            ]
+          }
+        }
+      },
+      "version": "4503.0.0"
+    },
+    {
+      "dependency": {
         "id": "paper2_scotland2",
         "versionRange": "=4.8.0",
         "additionalData": {
@@ -131,39 +155,16 @@
     },
     {
       "dependency": {
-        "id": "bs-cordl",
-        "versionRange": "=4500.1.0",
-        "additionalData": {
-          "headersOnly": true,
-          "branchName": "version/v4500_1_0",
-          "compileOptions": {
-            "includePaths": [
-              "include"
-            ],
-            "cppFeatures": [],
-            "cppFlags": [
-              "-fdeclspec",
-              "-DUNITY_6",
-              "-DHAS_CODEGEN",
-              "-Wno-invalid-offsetof"
-            ]
-          }
-        }
-      },
-      "version": "4500.1.0"
-    },
-    {
-      "dependency": {
         "id": "autohooks",
-        "versionRange": "=0.1.2251808403685376",
+        "versionRange": "=0.1.2533287675297792",
         "additionalData": {
           "headersOnly": true,
           "overrideSoName": "libautohooks.so",
-          "branchName": "version/v0_1_2251808403685376",
+          "branchName": "version/v0_1_2533287675297792",
           "cmake": true
         }
       },
-      "version": "0.1.2251808403685376"
+      "version": "0.1.2533287675297792"
     },
     {
       "dependency": {
@@ -187,13 +188,13 @@
     {
       "dependency": {
         "id": "beatsaber-hook",
-        "versionRange": "=8.2.1",
+        "versionRange": "=9.3.0",
         "additionalData": {
-          "soLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v8.2.1/libbeatsaber-hook.so",
-          "debugSoLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v8.2.1/debug_libbeatsaber-hook.so",
+          "soLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v9.3.0/libbeatsaber-hook.so",
+          "debugSoLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v9.3.0/debug_libbeatsaber-hook.so",
           "overrideSoName": "libbeatsaber-hook.so",
-          "modLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v8.2.1/beatsaber-hook.qmod",
-          "branchName": "version/v8_2_1",
+          "modLink": "https://github.com/QuestPackageManager/beatsaber-hook/releases/download/v9.3.0/beatsaber-hook.qmod",
+          "branchName": "version/v9_3_0",
           "compileOptions": {
             "cppFlags": [
               "-Wno-extra-qualification"
@@ -202,7 +203,7 @@
           "cmake": true
         }
       },
-      "version": "8.2.1"
+      "version": "9.3.0"
     },
     {
       "dependency": {
